@@ -1,0 +1,152 @@
+.container {
+  background-color: #07a0d3;
+  border-radius: 10px;
+  color: white;
+  width: 700px;
+  margin: 0 auto;
+  margin-top: 50px;
+
+  .headers {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 150px;
+
+    .name {
+      width: 50%;
+      text-align: center;
+      h1 {
+        font-size: 40px;
+        margin-left: 45px;
+      }
+      h3 {
+        width: 55%;
+        margin: 0 auto;
+        margin-top: 10px;
+        text-align: start;
+      }
+    }
+
+    .image {
+      width: 50%;
+      margin-top: -40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      span {
+        margin-top: -30px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .details {
+    display: flex;
+    flex-wrap: wrap;
+    width: 550px;
+    margin: 20px auto;
+    div {
+      width: 33.33%;
+      margin: 20px 10px;
+      display: flex;
+      flex-direction: column;
+      span {
+        font-weight: bold;
+        font-size: 18px;
+        color: #e8e8e8;
+      }
+
+      p {
+        color: #e8e8e8;
+        font-size: 13px;
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    width: 500px;
+
+    .headers {
+      .name {
+        h1 {
+          font-size: 30px;
+        }
+        h3 {
+          width: 50%;
+        }
+      }
+
+      .image {
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .details {
+      width: 300px;
+      margin-top: 20px;
+      margin-left: 60px;
+      div {
+        width: 40%;
+        span {
+          font-size: 16px;
+        }
+
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    border-radius: 5px;
+    color: white;
+    width: 300px;
+
+    .headers {
+      flex-direction: column;
+      height: 250px;
+
+      .name {
+        h1 {
+          font-size: 25px;
+          margin-left: -75px;
+          width: 300px;
+          text-align: center;
+        }
+        h3 {
+          text-align: center;
+        }
+      }
+      .image {
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .details {
+      width: 300px;
+      margin-left: 0px;
+      div {
+        text-align: center;
+        width: 40%;
+        span {
+          font-size: 15px;
+        }
+
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
