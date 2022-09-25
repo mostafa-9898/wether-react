@@ -65,7 +65,7 @@ export async function getServerSideProps(context) {
     const city = getCity(cityData);
 
     // get data from API
-    const res = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${city.coord.lat}&lon=${city.coord.lon}&appid=${process.env.API_KEY}&units=metric&exclude=minutely`)
+    const res = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${city.coord.lat}&lon=${city.coord.lon}&appid=4155bc46cb4b395b1a26a4d3cb7f3daf&units=metric&exclude=minutely`)
     const resData = await res.data;
 
     return {
