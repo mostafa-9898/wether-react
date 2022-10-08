@@ -4,10 +4,10 @@ import Image from 'next/image';
 import Head from 'next/head'
 import Style from '../../styles/City.module.scss'
 import Moment from 'react-moment';
+import { KEY_ULR } from '../../helpers/key';
 
 
 const City = ({ weatherData }) => {
-    console.log(weatherData);
     return (
         <>
             <Head>
@@ -65,7 +65,7 @@ export async function getServerSideProps(context) {
     const city = getCity(cityData);
 
     // get data from API
-    const res = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${city.coord.lat}&lon=${city.coord.lon}&appid=4155bc46cb4b395b1a26a4d3cb7f3daf&units=metric&exclude=minutely`)
+    const res = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${city.coord.lat}&lon=${city.coord.lon}&appid=${KEY_ULR}&units=metric&exclude=minutely`)
     const resData = await res.data;
 
     return {
